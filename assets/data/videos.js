@@ -22,11 +22,11 @@
 window.ARI_VIDEOS = [
   {
     src: 'videos/1.mp4',
-    thumb: 50,
+    thumb: 35,
     poster: '',
     title: 'Un video su YouTube',
     description:
-      "Le chiedi un video e Ari apre il canale di Netflix Italia su YouTube, poi fa partire il teaser di Cyberpunk: Edgerunners 2.",
+      "Le chiedi un video e Ari apre il canale di Netflix Italia su YouTube, poi il teaser di Cyberpunk: Edgerunners 2.",
     category: 'YouTube',
   },
   {
