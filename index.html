@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ari — la tua assistente IA per il desktop</title>
+    <meta
+      name="description"
+      content="Ari è un'assistente IA gratuita per il desktop: un avatar animato che ti risponde a voce, cerca sul web e si ricorda di te."
+    />
+    <meta name="theme-color" content="#0b0c10" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/vendor/lenis/lenis.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <script defer src="assets/js/config.js"></script>
+    <script defer src="assets/vendor/lenis/lenis.min.js"></script>
+    <script defer src="assets/js/site.js"></script>
+    <script defer src="assets/js/home.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+
+    <!-- ============================ NAVIGAZIONE ============================ -->
+    <header class="nav-wrap">
+      <nav class="nav" aria-label="Principale">
+        <a class="logo" href="index.html" aria-label="Ari, pagina iniziale">
+          <span class="logo__mark" aria-hidden="true"><i></i><i></i></span>
+          <span class="logo__text">Ari</span>
+        </a>
+        <span class="nav__beta" title="Progetto personale, ancora in beta">Beta</span>
+        <div class="nav__links">
+          <a href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/></svg>Home</a>
+          <a href="funzionalita.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg>Funzionalità</a>
+          <a href="versioni.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 8v8M18 10c0 4-4 5-10 6.5"/></svg>Versioni</a>
+          <a href="video.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5.5 3.5-5.5 3.5z"/></svg>Video</a>
+        </div>
+        <button class="nav__menu" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Apri il menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="funzionalita.html">Funzionalità</a>
+        <a href="versioni.html">Versioni</a>
+        <a href="video.html">Video</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- =============================== HERO =============================== -->
+      <section class="hero">
+        <svg class="hero__orbits" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <circle cx="120" cy="980" r="640" fill="none" stroke="rgba(138,168,255,.22)" stroke-dasharray="2 8" />
+          <path d="M-40 700 C 380 330, 980 250, 1500 420" fill="none" stroke="rgba(187,161,255,.22)" />
+          <circle cx="1380" cy="210" r="360" fill="none" stroke="rgba(187,161,255,.14)" stroke-dasharray="2 8" />
+        </svg>
+
+        <div class="container hero__inner">
+          <p class="hero__kicker" data-reveal>
+            <span class="nav__beta">Beta</span> Un progetto personale, ancora in sviluppo
+          </p>
+
+          <h1 class="hero__title" data-reveal style="--d: 1">
+            <svg class="doodle doodle--spiral" viewBox="0 0 60 50" aria-hidden="true"><path d="M30 25c0-3 4-4 6-2 3 3 0 9-6 9-7 0-11-7-8-13 3-7 14-9 20-3 7 7 3 19-8 21-10 2-20-5-21-14" fill="none" stroke="#8aa8ff" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <svg class="doodle doodle--star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3v34M5 11l30 18M35 11 5 29" stroke="#bba1ff" stroke-width="3.5" stroke-linecap="round"/></svg>
+            <span class="doodle doodle--dot doodle--dot-a" aria-hidden="true"></span>
+            <span class="doodle doodle--dot doodle--dot-b" aria-hidden="true"></span>
+            La tua assistente IA,<br />
+            <span class="grad">sempre sul desktop</span>
+          </h1>
+
+          <p class="lead hero__lead" data-reveal style="--d: 2">
+            Ari è un avatar animato che vive in un angolo dello schermo. Le parli, ti risponde a voce, cerca sul web
+            e si ricorda di te.
+          </p>
+
+          <div class="hero__actions" data-reveal style="--d: 3">
+            <a class="btn btn--primary btn--lg" href="video.html">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+              Guarda i video
+            </a>
+            <a class="btn btn--light btn--lg" href="funzionalita.html">Cosa sa fare</a>
+          </div>
+        </div>
+
+        <!-- Schermo d'esempio: Ari nell'angolo, sottotitoli e barra delle applicazioni -->
+        <div class="container">
+          <div class="stage" data-stage data-reveal style="--d: 4">
+            <div class="screen" data-screen role="img" aria-label="Anteprima: Ari nell'angolo dello schermo ascolta una domanda e risponde a voce, con i sottotitoli">
+              <div class="screen__wall" aria-hidden="true"></div>
+
+              <ul class="screen__icons" aria-hidden="true">
+                <li><span class="ic ic--blue"></span>Documenti</li>
+                <li><span class="ic ic--purple"></span>Giochi</li>
+                <li><span class="ic ic--cyan"></span>Musica</li>
+              </ul>
+
+              <div class="screen__window" aria-hidden="true">
+                <div class="win__bar"><span>Appunti.txt</span><span class="win__ctrl"><i></i><i></i><i></i></span></div>
+                <div class="win__body">
+                  <span style="width: 72%"></span>
+                  <span style="width: 88%"></span>
+                  <span style="width: 54%"></span>
+                  <span style="width: 80%"></span>
+                  <span style="width: 40%"></span>
+                </div>
+              </div>
+
+              <div class="ari-widget" data-avatar-widget aria-hidden="true">
+                <div class="ari-widget__timer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+                  Pasta <b data-timer>09:42</b>
+                </div>
+                <div class="ari-widget__panel">
+                  <span class="ari-widget__state"><i></i><span data-avatar-state>In attesa</span></span>
+                  <canvas class="ari-widget__canvas" data-avatar></canvas>
+                </div>
+              </div>
+
+              <div class="subs" aria-hidden="true">
+                <p class="subs__line is-empty" data-line="user"><b>Tu</b><span class="txt"></span></p>
+                <p class="subs__line subs__line--ari is-empty" data-line="ari"><b>Ari</b><span class="txt"></span></p>
+              </div>
+
+              <div class="taskbar" aria-hidden="true">
+                <span class="tb tb--start"></span>
+                <span class="tb"></span>
+                <span class="tb tb--blue"></span>
+                <span class="tb tb--purple"></span>
+                <span class="tb"></span>
+                <span class="taskbar__tray"><span class="tray-ari"></span><span data-clock>12:00</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="stage__hint" data-reveal>
+            <span class="keys"><span class="kbd">Ctrl</span>+<span class="kbd">Alt</span>+<span class="kbd">Spazio</span></span>
+            per parlarle, ovunque. Oppure di' «Ehi Ari».
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================ COSA SA FARE ============================ -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <span class="kicker">Funzionalità</span>
+            <h2>Tutto quello che ti serve, <span class="grad">a portata di voce</span></h2>
+          </div>
+
+          <div class="grid-3">
+            <a class="card" href="funzionalita.html#voce" data-reveal>
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+              <h3>Parla in modo naturale</h3>
+              <p>Premi una scorciatoia o di' «Ehi Ari». Risponde a voce, frase per frase, in italiano o in inglese.</p>
+              <span class="link">Scopri di più →</span>
+            </a>
+            <a class="card" href="funzionalita.html#cervello" data-reveal style="--d: 1">
+              <span class="icon icon--purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+              <h3>Cerca sul web</h3>
+              <p>Per le notizie di oggi cerca su DuckDuckGo, Bing e Wikipedia, legge le pagine e ti cita le fonti.</p>
+              <span class="link">Scopri di più →</span>
+            </a>
+            <a class="card" href="funzionalita.html#memoria" data-reveal style="--d: 2">
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>
+              <h3>Si ricorda di te</h3>
+              <p>Salva i fatti importanti in file leggibili, che puoi spostare sul NAS o esportare.</p>
+              <span class="link">Scopri di più →</span>
+            </a>
+            <a class="card" href="funzionalita.html#timer" data-reveal>
+              <span class="icon icon--purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>
+              <h3>Timer e sveglie</h3>
+              <p>Più timer insieme, sveglie che si ripetono e «rimandala di 10 minuti».</p>
+              <span class="link">Scopri di più →</span>
+            </a>
+            <a class="card" href="funzionalita.html#permessi" data-reveal style="--d: 1">
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <h3>Schermo, appunti e file</h3>
+              <p>Guarda lo schermo, legge gli appunti, scrive sotto dettatura. Solo se lo attivi tu.</p>
+              <span class="link">Scopri di più →</span>
+            </a>
+            <a class="card" href="funzionalita.html#gioco" data-reveal style="--d: 2">
+              <span class="icon icon--purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7 10.5v4M5 12.5h4M15.5 11.5h.01M18 14h.01"/></svg></span>
+              <h3>Modalità gioco</h3>
+              <p>Meno memoria e niente chiacchiere mentre giochi. La scorciatoia per parlarle funziona sempre.</p>
+              <span class="link">Scopri di più →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= PERCHÉ ARI ============================= -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <span class="kicker kicker--purple">Perché Ari</span>
+            <h2>Pensata per <span class="grad">starti accanto</span></h2>
+          </div>
+
+          <div class="grid-3">
+            <div class="card why" data-reveal>
+              <span class="why__num">01</span>
+              <h3>Gratis davvero</h3>
+              <p>Nessun abbonamento. Usa le chiavi gratuite di Groq o Gemini, oppure Ollama direttamente sul tuo PC.</p>
+            </div>
+            <div class="card why" data-reveal style="--d: 1">
+              <span class="why__num">02</span>
+              <h3>Leggera</h3>
+              <p>Circa 110 MB di RAM a riposo. Con la modalità gioco si fa da parte mentre giochi.</p>
+            </div>
+            <div class="card why" data-reveal style="--d: 2">
+              <span class="why__num">03</span>
+              <h3>Rispetta la privacy</h3>
+              <p>Schermo, appunti e file restano spenti finché non li attivi tu. Le chiavi restano cifrate sul PC.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================== COME SI INIZIA =========================== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <span class="kicker">Come si inizia</span>
+            <h2>Pronta in <span class="grad">due minuti</span></h2>
+          </div>
+
+          <ol class="steps">
+            <li data-reveal>
+              <span class="steps__num">1</span>
+              <h3>Installa</h3>
+              <p>Doppio clic su <code>Ari-Setup-1.5.0.exe</code>. Si installa e si avvia da sola.</p>
+            </li>
+            <li data-reveal style="--d: 1">
+              <span class="steps__num steps__num--purple">2</span>
+              <h3>Scegli il cervello</h3>
+              <p>Una chiave gratuita Groq in un minuto, oppure Ollama sul tuo PC, anche senza internet.</p>
+            </li>
+            <li data-reveal style="--d: 2">
+              <span class="steps__num">3</span>
+              <h3>Parla</h3>
+              <p>Premi <span class="kbd">Ctrl</span> <span class="kbd">Alt</span> <span class="kbd">Spazio</span> e chiedi quello che vuoi.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================== ESEMPI =============================== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <span class="kicker kicker--purple">Esempi</span>
+            <h2>Cosa puoi <span class="grad">chiederle</span></h2>
+            <p class="lead">Basta parlarle come a una persona.</p>
+          </div>
+          <ul class="ask" data-reveal>
+            <li>«Che tempo fa domani a Milano?»</li>
+            <li>«Chi ha vinto ieri sera?»</li>
+            <li>«Ricordati che il mio compleanno è il 12 maggio»</li>
+            <li>«Metti Blinding Lights su Spotify»</li>
+            <li>«Metti un timer di 3 minuti per le uova»</li>
+            <li>«Svegliami alle 7 dal lunedì al venerdì»</li>
+            <li>«Cosa significa questo errore?»</li>
+            <li>«Traduci gli appunti in inglese»</li>
+            <li>«Di cosa abbiamo parlato la settimana scorsa?»</li>
+            <li>«Apri il pannello di controllo»</li>
+            <li>«Can we speak English for a bit?»</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================================ CTA ================================= -->
+      <section class="section">
+        <div class="container">
+          <div class="cta" data-reveal>
+            <span class="kicker kicker--purple">In beta</span>
+            <h2>Un progetto <span class="grad">personale</span></h2>
+            <p class="lead">
+              Ari è un progetto personale, ancora in beta: non è ancora disponibile da scaricare. Intanto puoi
+              guardarla in azione e seguire come cresce, versione dopo versione.
+            </p>
+            <div class="cta__actions">
+              <a class="btn btn--primary btn--lg" href="video.html">Guarda i video</a>
+              <a class="btn btn--lg" href="versioni.html">Come sta crescendo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ PIÈ DI PAGINA ============================ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__main">
+          <div class="footer__about">
+            <a class="logo" href="index.html" aria-label="Ari, pagina iniziale">
+              <span class="logo__mark" aria-hidden="true"><i></i><i></i></span>
+              <span class="logo__text">Ari</span>
+            </a>
+            <p>La tua assistente IA per il desktop, in italiano e in inglese.</p>
+            <p class="footer__beta"><span class="nav__beta">Beta</span> Un progetto personale, ancora in sviluppo.</p>
+          </div>
+          <nav class="footer__col" aria-label="Pagine">
+            <h2>Pagine</h2>
+            <a href="index.html">Home</a>
+            <a href="funzionalita.html">Funzionalità</a>
+            <a href="versioni.html">Versioni</a>
+            <a href="video.html">Video</a>
+          </nav>
+          <div class="footer__col">
+            <h2>Scopri</h2>
+            <a href="funzionalita.html#voce">Parlare con Ari</a>
+            <a href="funzionalita.html#permessi">Permessi</a>
+            <a href="funzionalita.html#gioco">Modalità gioco</a>
+            <a href="funzionalita.html#privacy">Privacy</a>
+          </div>
+          <div class="footer__col">
+            <h2>Risorse</h2>
+            <a href="https://console.groq.com/keys" target="_blank" rel="noopener">Chiave gratuita Groq ↗</a>
+            <a href="https://ollama.com" target="_blank" rel="noopener">Ollama ↗</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-year>2026</span> Ryuzakxx · Ari <span data-version>1.5.0</span></span>
+          <span class="mono">ARI // V<span data-version>1.5.0</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Torna su" data-to-top>
+      <svg class="to-top__ring" viewBox="0 0 54 54" aria-hidden="true"><circle class="track" cx="27" cy="27" r="25" /><circle class="bar" cx="27" cy="27" r="25" pathLength="100" /></svg>
+      <svg class="to-top__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+    </button>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Versioni — Ari</title>
+    <meta
+      name="description"
+      content="La cronologia delle versioni di Ari: rilasci, branch e merge, dal primo commit alla 1.5.0."
+    />
+    <meta name="theme-color" content="#0b0c10" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/vendor/lenis/lenis.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/versions.css" />
+    <script defer src="assets/js/config.js"></script>
+    <script defer src="assets/vendor/lenis/lenis.min.js"></script>
+    <script defer src="assets/js/site.js"></script>
+    <script defer src="assets/data/versions.js"></script>
+    <script defer src="assets/js/gitgraph.js"></script>
+    <script defer src="assets/js/versions.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+
+    <!-- ============================ NAVIGAZIONE ============================ -->
+    <header class="nav-wrap">
+      <nav class="nav" aria-label="Principale">
+        <a class="logo" href="index.html" aria-label="Ari, pagina iniziale">
+          <span class="logo__mark" aria-hidden="true"><i></i><i></i></span>
+          <span class="logo__text">Ari</span>
+        </a>
+        <span class="nav__beta" title="Progetto personale, ancora in beta">Beta</span>
+        <div class="nav__links">
+          <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/></svg>Home</a>
+          <a href="funzionalita.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg>Funzionalità</a>
+          <a href="versioni.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 8v8M18 10c0 4-4 5-10 6.5"/></svg>Versioni</a>
+          <a href="video.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5.5 3.5-5.5 3.5z"/></svg>Video</a>
+        </div>
+        <button class="nav__menu" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Apri il menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="index.html">Home</a>
+        <a href="funzionalita.html">Funzionalità</a>
+        <a href="versioni.html" aria-current="page">Versioni</a>
+        <a href="video.html">Video</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <span class="kicker" data-reveal>Versioni</span>
+          <h1 data-reveal style="--d: 1">La storia di <span class="grad">Ari</span></h1>
+          <p class="lead" data-reveal style="--d: 2">
+            Ogni rilascio con le sue novità e, sotto, tutti i commit, i branch e i merge. Dal più recente al primo.
+          </p>
+          <ul class="stats-pills" data-reveal style="--d: 3">
+            <li class="pill pill--blue"><b data-stat="tags">–</b> versioni</li>
+            <li class="pill pill--purple"><b data-stat="commits">–</b> commit</li>
+            <li class="pill"><b data-stat="branches">–</b> branch</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="chipbar" aria-label="Vai a una versione" data-sticky>
+        <div class="chipbar__inner" data-chips></div>
+      </nav>
+
+      <section class="history">
+        <div class="container">
+          <div class="card history__card" data-reveal>
+            <div class="gg-head" aria-hidden="true">
+              <span>Branch</span>
+              <span>Commit</span>
+            </div>
+            <div class="gg" data-graph></div>
+          </div>
+
+          <ul class="gg-legend">
+            <li><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" class="lg-commit" /></svg>Commit</li>
+            <li><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" class="lg-merge" /></svg>Merge</li>
+            <li><svg width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" class="lg-ring" /><circle cx="12" cy="12" r="6" class="lg-merge" /></svg>Rilascio</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta" data-reveal>
+            <span class="kicker">Prossima pagina</span>
+            <h2>Guardala <span class="grad">in azione</span></h2>
+            <p class="lead">Brevi video su come le parli e cosa sa fare.</p>
+            <div class="cta__actions">
+              <a class="btn btn--primary btn--lg" href="video.html">Vai ai video</a>
+              <a class="btn btn--lg" href="funzionalita.html">Cosa sa fare</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ PIÈ DI PAGINA ============================ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__main">
+          <div class="footer__about">
+            <a class="logo" href="index.html" aria-label="Ari, pagina iniziale">
+              <span class="logo__mark" aria-hidden="true"><i></i><i></i></span>
+              <span class="logo__text">Ari</span>
+            </a>
+            <p>La tua assistente IA per il desktop, in italiano e in inglese.</p>
+            <p class="footer__beta"><span class="nav__beta">Beta</span> Un progetto personale, ancora in sviluppo.</p>
+          </div>
+          <nav class="footer__col" aria-label="Pagine">
+            <h2>Pagine</h2>
+            <a href="index.html">Home</a>
+            <a href="funzionalita.html">Funzionalità</a>
+            <a href="versioni.html">Versioni</a>
+            <a href="video.html">Video</a>
+          </nav>
+          <div class="footer__col">
+            <h2>Scopri</h2>
+            <a href="funzionalita.html#voce">Parlare con Ari</a>
+            <a href="funzionalita.html#permessi">Permessi</a>
+            <a href="funzionalita.html#gioco">Modalità gioco</a>
+            <a href="funzionalita.html#privacy">Privacy</a>
+          </div>
+          <div class="footer__col">
+            <h2>Risorse</h2>
+            <a href="https://console.groq.com/keys" target="_blank" rel="noopener">Chiave gratuita Groq ↗</a>
+            <a href="https://ollama.com" target="_blank" rel="noopener">Ollama ↗</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-year>2026</span> Ryuzakxx · Ari <span data-version>1.5.0</span></span>
+          <span class="mono">ARI // V<span data-version>1.5.0</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Torna su" data-to-top>
+      <svg class="to-top__ring" viewBox="0 0 54 54" aria-hidden="true"><circle class="track" cx="27" cy="27" r="25" /><circle class="bar" cx="27" cy="27" r="25" pathLength="100" /></svg>
+      <svg class="to-top__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+    </button>
+  </body>
+</html>
